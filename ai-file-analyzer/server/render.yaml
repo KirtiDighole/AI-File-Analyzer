@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: ai-file-analyzer-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: NODE_ENV
+        value: production
